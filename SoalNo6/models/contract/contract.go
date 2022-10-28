@@ -2,8 +2,8 @@ package contract
 
 // Header for tracing
 const (
-	HeaderReqID       = "X-BRI-ReqId"
-	HeaderParentReqID = "X-BRI-Parent-ReqId"
+	HeaderReqID       = "SoalNo6"
+	HeaderParentReqID = "SoalNo6-ReqId"
 )
 
 const (
