@@ -1,7 +1,7 @@
 package cart_repo
 
 import (
-	"Github.com/Dert12318/TNT-Telkom.git/SoalNo6/models"
+	"github.com/Dert12318/TNT-Telkom.git/models"
 	"fmt"
 
 	"gorm.io/gorm"

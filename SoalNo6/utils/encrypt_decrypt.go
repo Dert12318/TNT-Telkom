@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"io"
 
-	"Github.com/Dert12318/TNT-Telkom.git/SoalNo6/models"
+	"github.com/Dert12318/TNT-Telkom.git/models"
 
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/bcrypt"
