@@ -1,9 +1,14 @@
 package repo
 
 import (
-	"github.com/Dert12318/TNT-Telkom.git/models"
+	"SoalNo6/models"
 )
 
-type LoginRepoInterface interface {
-	AddProduct(Product models.Cart) error
+type CartRepoInterface interface {
+	AddNewProduct(Product models.Cart) error
+	AddExistProduct(Product models.Cart) error
+	CheckNamaProduct(Product models.Cart) (models.Cart, error)
+	CheckKodeProduct(kodeProduk string) (models.Cart, error)
+	DeleteProduct(Product models.Cart) error
+	GetAllProduct() (models.Carts, error)
 }
