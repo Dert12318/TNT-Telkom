@@ -1,0 +1,37 @@
+Apakah ada kesalahan dari script di bawah ini? Jika ada tolong jelaskan dimana letak kesalahannya dan bagaimana anda memperbaikinya. Jika tidak ada, tolong jelaskan untuk apa script di bawah ini.
+
+FROM golang 
+|
+|-> fungsinya untuk melakukan setting atau membuat install env yang digunakan biasanya from Golang:latest jika mau golang versi akhir
+ADD . /go/src/github.com/telkomdev/indihome/backend
+|
+|->ADD itu fungsi semacam mv atau copy, buat nge pick file / source yang ada di projek bisa juga dengan menggunakan COPY . /go/src/github.com/telkomdev/indihome/backend
+WORKDIR /go/src/github.com/telkomdev/indihome
+|
+|-> WORKDIR ini fungsi semacam target folder / directori nanti image dockernya ke create yaitu di /go/src/github.com/telkomdev/indihome
+RUN go get github.com/tools/godep
+|
+|->  Berisi perintah untuk menjalakan go get github.com/tools/godep dimana merupakan perintah untuuk install atau memasang package dari github dengan source github.com/tools/godep
+RUN godep restore
+|
+|->  Berisi perintah untuk menjalakan godep restore dimana perintah untuk menginstal versi paket yang ditentukan di Godeps/Godeps.json ke $GOPATH anda
+RUN go install github.com/telkomdev/indihome
+|
+|-> Berisi perintah untuk menjalakan go install github.com/telkomdev/indihome dimana go install ... akan melakukan installing package ataupun dependecy
+ENTRYPOINT /go/bin/indihome
+|
+|-> fungsinya membuat command yang nanti akses ke image  kita pakai entrypoint
+LISTEN 80
+|
+|-> listen port 80 seharusnya dibawah
+
+Perbaikan kalau menggunakan linter:
+
+FROM golang:1.17.6-alpine3.15
+COPY . /go/src/github.com/telkomdev/indihome/backend
+WORKDIR /go/src/github.com/telkomdev/indihome
+RUN go get github.com/tools/godep
+RUN godep restore
+RUN go install github.com/telkomdev/indihome
+ENTRYPOINT ["/go/bin/indihome"]
+EXPOSE 80

@@ -1,0 +1,11 @@
+6. Buat sebuah sebuah backend service Shopping Cart yang harus memilik api:
+    Api tambahProduk
+        Attribute kodeProduk, namaProduk, kuantitas
+        Menambahkan produk dengan kuantitas yang ditentukan.
+        Apabila produk sudah ada di dalam Cart, tambahkan kuantitasnya.
+    Api hapusProduk(string kodeProduk)
+        Menghapus produk dari Cart.
+    Api tampilkanCart
+        Menampilkan isi Cart dengan format {kodeProduk}- {namaProduk} - ({kuantitas })
+        Memiliki filter namaProduk dan kuantitas
+Buatlah backend service cart berikut feature code dan unit testnya.

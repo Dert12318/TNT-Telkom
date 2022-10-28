@@ -1,0 +1,7 @@
+4. Menurut anda apakah tujuan penggunaan microservices?
+Microservices adalah sebuah pendekatan pengembangan di mana aplikasi atau perangkat lunak dibuat dari banyak layanan kecil yang saling terhubung. 
+Microservices memungkinkan aplikasi bisa digunakan secara independen serta mempermudah pengembangan fitur. 
+Selain itu, pola arsitektur layanan mampu mempengaruhi hubungan database dengan aplikasi secara signifikan.
+Microservices atau arsitektur layanan mikro merupakan pembangunan perangkat lunak cloud modern.
+Oleh sebab itu, arsitektur microservices bersifat terdistribusi sehingga kinerja aplikasi keseluruhan tidak akan terganggu meski dilakukan beberapa perubahan program.
+Sehingga tujuan penggunaan microservices jelas digunakan untuk membuat aplikasi lebih mudah dilakukan perbaikan namun tidak menurunkan perfoma serta dapat dikerjakan paralel
